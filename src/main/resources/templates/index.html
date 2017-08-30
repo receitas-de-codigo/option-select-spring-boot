@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+</head>
+<body>
+    <p>Selected option value!</p>
+
+    <select name="pais">
+        <option th:each="pais : ${ls}"
+                th:value="${pais.id}"
+                th:selected="${pais.id == selecionado.id}"
+                th:text="${pais.nome}" />
+    </select>
+
+</body>
+</html>
